@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Concert+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../static/history.css" />
+  </head>
+  <style>
+    body {
+      font-family: "Concert One";
+      background: rgb(27, 240, 220);
+    }
+  </style>
+  <body>
+    <nav class="navbar navbar-default" style="background-color: #15172b">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#" style="color: white">
+            Expense Tracker</a
+          >
+        </div>
+        <ul class="nav navbar-nav">
+          <li><a href="/home" style="color: white">Home</a></li>
+          <li><a href="/addExpense" style="color: white">Add</a></li>
+          <li><a href="/history" style="color: white">History</a></li>
+          <li class="active">
+            <a href="/limit" style="color: #15172b">Limit</a>
+          </li>
+          <li><a href="/today" style="color: white">Report</a></li>
+
+          <li><a href="/logout" style="color: white">Logout</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!--<p> Currently your MONTHLY limit is ₹ {{y}} </p>-->
+    <style>
+      body {
+        font-family: "Concert One";
+        overflow: hidden;
+      }
+
+      center {
+        margin-top: 10%;
+      }
+      input[type="number"] {
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+    </style>
+
+    <center>
+      <form action="/limitnum" method="POST">
+        <p>ENTER the MONTHLY LIMIT to avoid over EXPENSES</p>
+        <br />
+
+        <input type="number" name="number" required />
+        <span>
+          <button class="btn btn-warning" type="submit">ENTER</button>
+        </span>
+      </form>
+    </center>
+  </body>
+</html>
